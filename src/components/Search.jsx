@@ -1,8 +1,16 @@
 
-const Search = (props) => {
+const Search = ({searchTerm, setSearchTerm}) => {
 
     return(
-        <div className="text-white text-3xl">{props.searchTerm}</div>
+        <div className="search">
+            <div>
+                <img src="search.svg" alt="search" />
+
+                <input type="text" placeholder="Search trough thousands of movies" 
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)} />
+            </div>
+        </div>
     )
 }
 
