@@ -5,6 +5,7 @@ import Spinner from './components/Spinner.jsx';
 import { useState } from 'react'
 import { useEffect } from 'react';
 import MovieCard from "./components/MovieCard.jsx";
+import { updateSearchCount } from './appwrite.js';
 
 const API_BASE_URL = 'https://api.themoviedb.org/3';
 
@@ -54,7 +55,9 @@ function App() {
         return;
       }
 
-      setMovieList(data.results || [])
+      setMovieList(data.results || []);
+
+      updateSearchCount()
 
     } catch (error){
       console.error(`Error reaching movies: ${error}`);
