@@ -2,9 +2,18 @@ import React from 'react'
 
 function App() {
   return (
-    <h1 class="text-3xl font-bold underline">    
-    Hello world!  
-    </h1>
+    <main>
+      <div className='patters'></div>  
+      
+      <div className='wrapper'>
+        <header>
+          <h1> Find <span className='text-gradient'>Movies</span> You Want Bro!</h1>
+        </header>
+
+        <p>Search</p>
+      </div>
+        </main>
+    
   )
 }
 
